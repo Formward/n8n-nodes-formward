@@ -1,0 +1,8 @@
+node_modules/
+credentials/
+nodes/
+scripts/
+tsconfig.json
+*.ts
+!dist/**/*.d.ts
+.gitignore

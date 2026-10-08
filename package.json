@@ -1,0 +1,57 @@
+{
+  "name": "n8n-nodes-formward",
+  "version": "0.1.0",
+  "description": "n8n community node for Formward — the EU-hosted, GDPR-friendly form backend. Trigger on new submissions and call the Formward REST API.",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "formward",
+    "forms",
+    "form-backend",
+    "gdpr",
+    "eu",
+    "submissions"
+  ],
+  "license": "MIT",
+  "homepage": "https://formward.eu",
+  "author": {
+    "name": "Formward",
+    "email": "hello@formward.eu",
+    "url": "https://formward.eu"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/formward/n8n-nodes-formward.git"
+  },
+  "engines": {
+    "node": ">=18.10"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && node scripts/copy-icons.mjs",
+    "build:tsc": "tsc",
+    "dev": "tsc --watch",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/FormwardApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Formward/Formward.node.js",
+      "dist/nodes/Formward/FormwardTrigger.node.js"
+    ]
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "devDependencies": {
+    "n8n-workflow": "^1.82.0",
+    "typescript": "^5.5.0"
+  }
+}
