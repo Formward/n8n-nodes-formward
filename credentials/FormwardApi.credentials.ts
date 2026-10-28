@@ -22,7 +22,7 @@ export class FormwardApi implements ICredentialType {
 
 	displayName = 'Formward API';
 
-	documentationUrl = 'https://app.formward.eu/api/v1/openapi.json';
+	documentationUrl = 'https://formward.eu/api/v1/openapi.json';
 
 	properties: INodeProperties[] = [
 		{
@@ -39,7 +39,7 @@ export class FormwardApi implements ICredentialType {
 			displayName: 'Base URL',
 			name: 'baseUrl',
 			type: 'string',
-			default: 'https://app.formward.eu/api/v1',
+			default: 'https://formward.eu/api/v1',
 			required: true,
 			description:
 				'Base URL of the Formward REST API. Defaults to the EU-hosted production API. Override for self-hosted instances.',

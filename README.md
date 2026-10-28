@@ -47,7 +47,7 @@ Create a **Formward API** credential:
 
 1. In the Formward dashboard open **API keys** and create a key with at least the `forms:read` and `submissions:read` scopes. The REST API is part of the Professional plan.
 2. In n8n, add a **Formward API** credential and paste the key.
-3. **Base URL** defaults to `https://app.formward.eu/api/v1`. Leave it for the hosted API (`https://formward.eu/api/v1` also works), or point it at your own instance.
+3. **Base URL** defaults to `https://formward.eu/api/v1`. Leave it for the hosted API, or point it at your own instance.
 
 The credential authenticates as `Authorization: Bearer <apiKey>` and is verified with a `GET /forms` request when you save it.
 
@@ -82,7 +82,7 @@ cd ~/.n8n/custom && npm link n8n-nodes-formward
 
 ## API reference
 
-OpenAPI description: `https://app.formward.eu/api/v1/openapi.json`. Documentation: [formward.eu/docs/api](https://formward.eu/docs/api).
+OpenAPI description: `https://formward.eu/api/v1/openapi.json`. Documentation: [formward.eu/docs/api](https://formward.eu/docs/api).
 
 ## License
 
