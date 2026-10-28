@@ -99,7 +99,7 @@ export class Formward implements INodeType {
 						routing: {
 							request: {
 								method: 'GET',
-								url: '=/forms/{{$parameter["formId"]}}',
+								url: '=/forms/{{encodeURIComponent($parameter["formId"])}}',
 							},
 							output: {
 								postReceive: [
@@ -135,7 +135,7 @@ export class Formward implements INodeType {
 						routing: {
 							request: {
 								method: 'GET',
-								url: '=/forms/{{$parameter["formId"]}}/submissions',
+								url: '=/forms/{{encodeURIComponent($parameter["formId"])}}/submissions',
 							},
 							output: {
 								postReceive: [
